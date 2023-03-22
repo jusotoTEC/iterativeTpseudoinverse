@@ -1,5 +1,4 @@
-# MATLAB Code from Numerical Experiments in Paper *"Convergence analysis of iterative methods for computing the T-pseudoinverse
-of complete full-rank third-order tensors based on the T-produc"*
+# MATLAB Code from Numerical Experiments in Paper *"Convergence analysis of iterative methods for computing the T-pseudoinverse of complete full-rank third-order tensors based on the T-produc"*
 
 ## Author
 
