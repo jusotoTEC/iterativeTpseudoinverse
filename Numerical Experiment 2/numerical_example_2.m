@@ -44,17 +44,17 @@ xlabel(['MSE = ',num2str(errorTPINV)])
 
 iterMax=1000; tol=1e-1;
 Bt=tCTranspose(B);
-BtB=tprod(Bt,B);
-alpha=tNorm2(BtB);
-X=(1/alpha^2)*BtB;
-I=tEye(n,p);
+BBt=tprod(B,Bt);
+alpha=tNorm2(BBt);
+X=(1/alpha^2)*BBt;
+I=tEye(m,p);
 er=[];
 
 for k=1:iterMax            
-    P1=tprod(BtB,X);    
+    P1=tprod(BBt,X);    
     P2=tprod(P1,P1);    
     X=tprod(X,3*I-3*P1+P2); 
-    Sp=tprod(X,Bt);
+    Sp=tprod(Bt,X);
     
     %Compute Error 
     e1=tNorm2(tprod(tprod(B,Sp),B)-B); 

@@ -10,7 +10,7 @@ clc; clear; close all
 
 % Part 1: Initial Values
 
-m=250; n=250; p=10; s=2;
+m=500; n=500; p=10; s=6;
 A=randn(m,n,p)+1i*randn(m,n,p);
 
 iterMax=1000; tol=1e-8;
@@ -39,7 +39,7 @@ if m==n
     disp(['Error = ', num2str(er)])
     disp(['Time (s) = ', num2str(t)])
 
-elseif m>n
+elseif m<n
     
     % Initial Value
     At=tCTranspose(A); AAt=tprod(A,At);
@@ -62,7 +62,7 @@ elseif m>n
     disp(['Error = ', num2str(er)])
     disp(['Time (s) = ', num2str(t)])
 
-elseif m<n  
+elseif m>n  
     
     % Initial Value
     At=tCTranspose(A); AtA=tprod(At,A);
